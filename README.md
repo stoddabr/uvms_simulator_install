@@ -51,15 +51,15 @@ Or install manually by following the instructions below:
 
 	  - Give permissions to execute the bash script
 
-	       ```chmod +x build_with_moveit.bash .```
+	       ```chmod +x build_moveit.bash .```
 
 	  - If you have an Nvidia graphics card, run:
 
-	       ``` ./build_with_moveit.bash .```
+	       ``` ./build_moveit.bash .```
 
 	      Otherwise run
 
-	       ```./build_with_moveit.bash -w .```
+	       ```./build_moveit.bash -w .```
 
 	       
 6. Drop into a Docker container the newly built image:
