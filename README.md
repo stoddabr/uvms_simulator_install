@@ -173,7 +173,8 @@ The `run_custom.bash` in this repository mounts the entire `uuv_ws` catkin works
 Common Issues
 ---
 
-- If a NVIDIA graphics card isn't set up properly, running `./run_custom.bash dave_nvidia:latest` will result in something similar to the error below. This can be resolved by fixing the issue that is preventing the graphics card from being seen by your OS (for example, on a dual boot machine a power saving program running on windows may disable the graphics to save power requiring you to switch to windows and stop it). To check if the NVIDIA card is setup properly, run `lspci -v | grep VGA` which should list your graphics card (if it doesn't then you may have a similar issue -- if it does tryp updating your drivers)
+
+- If a NVIDIA graphics card isn't set up properly, running `./run_custom.bash dave_nvidia:latest` will result in something similar to the error below. This can be resolved by updating your drivers ([how to install nvidia proprietary drivers](https://www.cyberciti.biz/faq/ubuntu-linux-install-nvidia-driver-latest-proprietary-driver/)) fixing the issue that is preventing the graphics card from being seen by your OS (for example, on a dual boot machine a power saving program running on windows may disable the graphics to save power requiring you to switch to windows and stop it). To check if the NVIDIA card is setup properly, run `lspci -v | grep VGA` which should list your graphics card (if it doesn't then you may have a similar issue -- if it does tryp updating your drivers)
 ```bash
 docker: Error response from daemon: OCI runtime create failed: container_linux.go:370: starting container process caused: process_linux.g\n0:459: container init caused: Running hook #0:: error running hook: exit status 1, stdout: , stderr: nvidia-container-cli: initialization\nerror: driver error: failed to process request: unknown.\ncharisma charisma- ROG-Zephyrus-G15-GA5030R-GA5030R: -uuy ws/src/daye/dockers |
 ```
