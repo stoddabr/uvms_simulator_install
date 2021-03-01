@@ -172,7 +172,7 @@ The `run_custom.bash` in this repository mounts the entire `uuv_ws` catkin works
 
 Common Issues
 ---
-
+- If a permission denied error occurs, try running with `sudo ` followed by the command
 
 - If a NVIDIA graphics card isn't set up properly, running `./run_custom.bash dave_nvidia:latest` will result in something similar to the error below. This can be resolved by updating your drivers ([how to install nvidia proprietary drivers](https://www.cyberciti.biz/faq/ubuntu-linux-install-nvidia-driver-latest-proprietary-driver/) or [how to install nvidia docker tools](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#docker)) (note: [nvidia drivers may break things](https://askubuntu.com/questions/882385/dev-sda1-clean-this-message-appears-after-i-startup-my-laptop-then-it-w)) fixing the issue that is preventing the graphics card from being seen by your OS (for example, on a dual boot machine a power saving program running on windows may disable the graphics to save power requiring you to switch to windows and stop it). To check if the NVIDIA card is setup properly, run `lspci -v | grep VGA` which should list your graphics card (if it doesn't then you may have a similar issue -- if it does tryp updating your drivers)
 ```bash
